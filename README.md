@@ -25,3 +25,27 @@ Run → requirements.txt | Share → setup.py | Organize → __init__.py
 -e → editable mode
 . → current project
 -Installs the project so code changes apply instantly.
+
+6.components -Modules used in our project
+-init-py-Makes components folder as package -importable and exportable
+-Data-ingestion:process of collecting and importing data from various sources into a system for storage and analysis.
+-Data-Transformation:process of converting raw data into a clean and suitable format for analysis or machine learning.
+-Model-trainer:all the training process
+
+7.
+pipeline:A sequence of connected steps where data flows automatically from one stage to the next.
+
+8.-logger.py
+👉 Keeps a record of what your program is doing
+(started, running, error happened)
+🧠 Like a diary
+
+-utils.py
+👉 Stores helper functions used again and again
+🧠 Like a toolbox
+
+-exception.py
+👉 Shows clear, custom error messages
+🧠 Like warning labels
+
+9.SYS Library: A built-in Python library that lets your program talk to the system (OS + Python runtime).
