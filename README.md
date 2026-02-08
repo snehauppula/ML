@@ -49,3 +49,38 @@ pipeline:A sequence of connected steps where data flows automatically from one s
 🧠 Like warning labels
 
 9.SYS Library: A built-in Python library that lets your program talk to the system (OS + Python runtime).
+
+10.
+What is StandardScaler?
+It normalizes numeric data using this formula:
+z=(x−mean)/standarddeviation
+Because many ML models (like Logistic Regression, SVM, KNN) work better when:
+Mean = 0
+Standard deviation = 1
+Example:
+If Salary values:
+20000, 30000, 40000
+After scaling:
+-1, 0, +1
+Now model won’t be biased toward large numbers.
+
+11.
+OneHotEncoder
+It converts categorical text data into numbers.
+Example:
+City column:
+Hyd
+Mum
+Hyd
+After OneHotEncoding:
+City_Hyd	City_Mum
+1	            0
+0	            1
+1	            0
+Machine learning models cannot understand text — so we convert it into 0s and 1s.
+
+12. ColumnTransformer → applies correct process to correct columns automatically
+| Age | Salary | City_Hyd | City_Mum |
+| --- | ------ | -------- | -------- |
+| -1  | -1     | 1        | 0        |
+| 1   | 1      | 0        | 1        |
