@@ -84,3 +84,5 @@ Machine learning models cannot understand text — so we convert it into 0s and 
 | --- | ------ | -------- | -------- |
 | -1  | -1     | 1        | 0        |
 | 1   | 1      | 0        | 1        |
+
+13. Dataclasses is a python decoder used to create light-weight data holding classes, it automatically generates methods like _init_
