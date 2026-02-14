@@ -54,7 +54,7 @@ class CustomData:
         try:
             custom_data_input_dict = {
                 "gender": [self.gender],
-                "race/ethnicity": [self.race_ethnicity],
+                "race_ethnicity": [self.race_ethnicity],
                 "parental_level_of_education": [self.parental_level_of_education],
                 "lunch": [self.lunch],
                 "test_preparation_course": [self.test_preparation_course],
