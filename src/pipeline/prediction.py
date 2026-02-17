@@ -11,8 +11,8 @@ class prediction:
         pass
     def predict(self, X):
         try:
-            preprocessor_path = "artifacts/preprocessor.pkl"
-            model_path = "artifacts/model.pkl"
+            preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")
+            model_path = os.path.join("artifacts", "model.pkl")
             preprocessor = load_object(file_path=preprocessor_path)
             model = load_object(file_path=model_path)
             data_scaled=    preprocessor.transform(X)
@@ -25,8 +25,8 @@ class predictPipeline:
         pass
     def predict(self, X):
         try:
-            preprocessor_path = "artifacts/preprocessor.pkl"
-            model_path = "artifacts/model.pkl"
+            preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")
+            model_path = os.path.join("artifacts", "model.pkl")
             preprocessor = load_object(file_path=preprocessor_path)
             model = load_object(file_path=model_path)
             data_scaled=    preprocessor.transform(X)

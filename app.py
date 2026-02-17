@@ -1,12 +1,13 @@
 from flask import Flask,render_template,request,redirect,session,url_for
 import sys
+import os
 import pandas as pd
 from src.pipeline.prediction import predictPipeline, CustomData
 from src.logger import logging
 from src.exception import CustomException
 
 app = Flask(__name__)
-app.secret_key = "secret_key_for_session" # In production, use a secure environment variable
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 
 @app.route('/')
 def index():
@@ -53,4 +54,7 @@ def predict_datapoint():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Debug mode is False by default for production safety
+    # Set FLASK_DEBUG=1 in environment for local development
+    debug_mode = os.environ.get('FLASK_DEBUG', '0') == '1'
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=debug_mode)
